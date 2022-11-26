@@ -32,7 +32,7 @@ public class ResponsavelModel implements Serializable{
     private String nome;
     @Column(nullable = false)
     private String aluno;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true, length = 11)
     private Integer cpf;
     @Column(nullable = false, length = 11)
     private Integer telefone;
