@@ -1,5 +1,8 @@
 package br.com.evaluete.api.Models;
 
+import java.io.Serializable;
+import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,10 +20,11 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table (name = "tb_aluno")
-public class AlunoModel {
+public class AlunoModel implements Serializable{
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private UUID id;
     @Column(nullable = false)
     private String login;
     @Column(nullable = false, unique = true)
