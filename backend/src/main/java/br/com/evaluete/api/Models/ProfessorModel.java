@@ -32,7 +32,7 @@ public class ProfessorModel implements Serializable{
     @Column(nullable = false)
     private String nome;
     @Column(nullable = false, unique = true, length = 11)
-    private Integer cpf;
+    private String cpf;
     @Column(nullable = false, length = 11)
-    private Integer telefone;
+    private String telefone;
 }

@@ -32,11 +32,11 @@ public class AlunoModel implements Serializable{
     @Column(nullable = false)
     private String nome;
     @Column(nullable = false, unique = true, length = 11)
-    private Integer cpf;
+    private String cpf;
     @Column(nullable = false)
     private String turma;
     @Column(nullable = false)
-    private Integer anoentrada;
+    private String anoentrada;
     @Column(nullable = false)
     private String responsavel;
 

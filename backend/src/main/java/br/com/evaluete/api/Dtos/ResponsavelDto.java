@@ -3,7 +3,9 @@ package br.com.evaluete.api.Dtos;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import lombok.Data;
 
+@Data
 public class ResponsavelDto {
     @NotBlank
     private String login;
@@ -13,8 +15,8 @@ public class ResponsavelDto {
     private String nome;
     @NotBlank
     @Size (min = 11, max = 11)
-    private Integer cpf;
+    private String cpf;
     @NotBlank 
     @Size(max = 11)
-    private Integer telefone;
+    private String telefone;
 }
